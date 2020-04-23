@@ -1,8 +1,8 @@
 import { Component, OnInit, ViewContainerRef } from "@angular/core";
-import { AuthService } from "dlv-ng-auth";
-import { MatMenuService } from "dlv-ng-services-menu";
+// import { AuthService } from "dlv-ng-auth";
+// import { MatMenuService } from "dlv-ng-services-menu";
 
-import { environment } from "@env/environment";
+// import { environment } from ;
 import { Router, Route } from "@angular/router";
 
 @Component({
@@ -12,17 +12,16 @@ import { Router, Route } from "@angular/router";
 })
 export class AppComponent implements OnInit {
   constructor(
-    private authService: AuthService,
-    private menuService: MatMenuService
+  
   ) {}
 
   ngOnInit() {
-    this.authService.init({
-      environment: environment.env
-    });
+    // this.authService.init({
+    //   environment: environment.env
+    // });
 
-    this.menuService.init({
-      environment: environment.env
-    });
+    // this.menuService.init({
+    //   environment: environment.env
+    // });
   }
 }

@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { ToastrService } from "ngx-toastr";
 
-import { LoaderService } from "@app/core/services";
+// import { LoaderService } from "@app/core/services";
 import { DashboardService } from "./../services/dashboard.service";
 import { FormControl } from "@angular/forms";
 
@@ -15,7 +15,7 @@ export class DashboardComponent implements OnInit {
   options: string[] = ["One", "Two", "Three"];
 
   constructor(
-    private loader: LoaderService,
+    // private loader: LoaderService,
     private toastr: ToastrService,
     private dashboardService: DashboardService
   ) {}

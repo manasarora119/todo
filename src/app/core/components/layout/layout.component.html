@@ -13,33 +13,40 @@
           >menu</i
         >
       </a>
+
+
     </div>
     <div class="header__brand">
       <div class="header__brand-img">
         <img class="logo-img" alt="logo" src="assets/images/logo.svg" />
       </div>
       <div class="header__brand-text">
-        <span class="header__brand-name">TRANSPORTER</span>
+        <span class="header__brand-name">TODO </span>
         <br />
-        <span class="header__brand-center" title="{{ selectedCenterName }}">{{
-          selectedCenterName
-        }}</span>
+       
       </div>
+
+
+
     </div>
     <div class="header__service-menu">
-      <dlv-mat-services-menu
-        (onCenterChange)="centerChange($event)"
-        [centerList]="centerList"
-      ></dlv-mat-services-menu>
+     
+      <section>
+        <div class="example-label">Stroked</div>
+        <div class="example-button-row">
+          <button mat-stroked-button (click)="addTask()">ADD</button>
+          </div>
+      </section>
+
     </div>
     <div class="header__notifications">
       <i class="material-icons dlv-icon">notifications</i>
     </div>
     <div class="header__profile hidden-sm">
-      <delhivery-user-details
+      <!-- <delhivery-user-details
         (onLogout)="goState()"
         [isMaterialView]="true"
-      ></delhivery-user-details>
+      ></delhivery-user-details> -->
     </div>
   </nav>
 </header>

@@ -10,7 +10,7 @@ const pagesRoutes: Routes = [
     {
         path: '',
         component: LayoutComponent,
-        canActivateChild: [AuthGuardService],
+        // canActivateChild: [AuthGuardService],
         children: [{
                         path: '',
                         redirectTo: 'dashboard',
@@ -19,7 +19,7 @@ const pagesRoutes: Routes = [
                     {
                         path: 'dashboard',
                         loadChildren: 'app/dashboard/dashboard.module#DashboardModule',
-                        canLoad: [AuthGuardService]
+                       
                     }
                 ]
             

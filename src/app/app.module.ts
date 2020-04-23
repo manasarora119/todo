@@ -13,13 +13,13 @@ import {
 } from "@angular/http";
 
 import { ToastrModule } from "ngx-toastr";
-import { SharedModule } from "@app/shared/shared.module";
-import { ToastOptions } from "@app/constants";
-import { CoreModule } from "@app/core/core.module";
+// import { SharedModule } from "@app/shared/shared.module";
+// import { ToastOptions } from "@app/constants";
+// import { CoreModule } from "@app/core/core.module";
 
 import { AppRoutesModule } from "./app.routes";
 import { AppComponent } from "./app.component";
-
+import { ToastOptions } from "./constants";
 // declare var require: any;
 
 @NgModule({
@@ -27,8 +27,9 @@ import { AppComponent } from "./app.component";
   imports: [
     BrowserAnimationsModule,
     FormsModule,
-    CoreModule,
-    SharedModule,
+    
+    // CoreModule,
+    // SharedModule,
     ToastrModule.forRoot(ToastOptions),
     AppRoutesModule
   ],

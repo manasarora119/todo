@@ -6,6 +6,7 @@ import { CoreRoutesModule } from "./core.routes";
 import { DlvNgAuthModule } from "dlv-ng-auth";
 import { DlvMaterialServicesMenuModule } from "dlv-ng-services-menu";
 
+import {MatRadioModule} from '@angular/material/radio';
 import {
   LayoutComponent,
   SidebarComponent,
@@ -31,6 +32,8 @@ import {
   imports: [
     CommonModule,
     DlvNgAuthModule,
+    MatRadioModule,
+    // MatSelectModule,
     DlvMaterialServicesMenuModule,
     FormsModule,
     CoreRoutesModule

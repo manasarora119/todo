@@ -9,7 +9,7 @@ import {
 import { Title } from "@angular/platform-browser";
 import { Router, ActivatedRoute, NavigationEnd } from "@angular/router";
 import { filter, map, mergeMap } from "rxjs/operators";
-import { environment } from "@env/environment";
+// import { environment } from "@env/environment";
 
 import { LoaderService } from "../../services";
 import { DeveloperGuideComponent } from "./../developer-guide/developer-guide.component";
@@ -50,26 +50,28 @@ export class LayoutComponent implements OnInit {
     private centerService: MatCenterService
   ) {
     this.getRouteParams();
-    this.selectedCenterName =
-      this.centerService.getCenterName() || "Center not selected";
-  }
+   }
 
   ngOnInit() {
     this.addDeveloperGuides();
-    this.centerService.onCenterChange().subscribe(
-      res => {
-        console.log(res);
-        console.log(
-          `Changes Center Detail:- Center Name : ${
-            res.center_name
-          }, Center ID : ${res.center_id}`
-        );
-        if (res && res.center_name) {
-          this.selectedCenterName = res.center_name;
-        }
-      },
-      error => {}
-    );
+    // this.centerService.onCenterChange().subscribe(
+    //   res => {
+    //     console.log(res);
+    //     console.log(
+    //       `Changes Center Detail:- Center Name : ${
+    //         res.center_name
+    //       }, Center ID : ${res.center_id}`
+    //     );
+    //     if (res && res.center_name) {
+    //       this.selectedCenterName = res.center_name;
+    //     }
+    //   },
+    //   error => {}
+    // );
+  }
+  addTask(){
+    console.log( "hello");
+    
   }
 
   /**
@@ -127,13 +129,13 @@ export class LayoutComponent implements OnInit {
   }
 
   addDeveloperGuides() {
-    if (environment.env === "dev") {
-      const componentFactory = this.componentResolver.resolveComponentFactory(
-        DeveloperGuideComponent
-      );
-      this.vcr.clear();
-      this.vcr.createComponent(componentFactory);
-    }
+    // if (environment.env === "dev") {
+    //   const componentFactory = this.componentResolver.resolveComponentFactory(
+    //     DeveloperGuideComponent
+    //   );
+    //   this.vcr.clear();
+    //   this.vcr.createComponent(componentFactory);
+    // }
   }
 
   goState() {

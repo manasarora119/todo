@@ -1,20 +1,26 @@
 <ul class="nav sidebar-nav" role="tablist" aria-multiselectable="false">
   <div class="mob-profile visible-xs visible-sm">
-    <span
-      class="mat-ava"
-      [ngStyle]="{ background: avatarBackgroundcolor || '#000' }"
-      >{{ userProfileAvatar }}</span
-    >
-    <p [ngClass]="{ 'text-hor': (userFirstName + userLastName).length < 18 }">
-      {{ userFirstName }} {{ userLastName }}
-    </p>
+   
   </div>
-  <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+  <!-- <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
     <a [routerLink]="['/dashboard']"> <i class="brick"></i>Dashboard </a>
-  </li>
-  <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
-    <a [routerLink]="['/analytics']"> <i class="brick"></i>Analytics </a>
-  </li>
+  </li> -->
+  
+
+
+
+
+
+  <mat-radio-group
+  aria-labelledby="example-radio-group-label"
+  class="example-radio-group"
+  [(ngModel)]="favoriteSeason">
+  <mat-radio-button class="example-radio-button" *ngFor="let option of data" [value]="option">
+    {{ option.title }}
+  </mat-radio-button>
+</mat-radio-group>
+
+  
   <hr
     class="break-line"
     style="border-color: #dbdbdb;margin-bottom: 10px;"
