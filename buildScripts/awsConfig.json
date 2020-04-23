@@ -1,0 +1,8 @@
+{
+    "dev": {
+        "bucket": "dev-ng4-bp.delhivery.com"
+    },
+    "prod": {
+        "bucket": "ng4-bp.delhivery.com"
+    }
+}

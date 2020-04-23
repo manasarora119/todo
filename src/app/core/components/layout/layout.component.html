@@ -1,0 +1,63 @@
+<header class="header">
+  <nav class="header__nav">
+    <div class="header__toggle-menu">
+      <a
+        href="javascript:"
+        class="icon"
+        left-menu-toggle
+        (click)="toggleSidebar()"
+      >
+        <i
+          class="material-icons dlv-icon"
+          [ngClass]="collapseSidebar ? '' : 'active'"
+          >menu</i
+        >
+      </a>
+    </div>
+    <div class="header__brand">
+      <div class="header__brand-img">
+        <img class="logo-img" alt="logo" src="assets/images/logo.svg" />
+      </div>
+      <div class="header__brand-text">
+        <span class="header__brand-name">TRANSPORTER</span>
+        <br />
+        <span class="header__brand-center" title="{{ selectedCenterName }}">{{
+          selectedCenterName
+        }}</span>
+      </div>
+    </div>
+    <div class="header__service-menu">
+      <dlv-mat-services-menu
+        (onCenterChange)="centerChange($event)"
+        [centerList]="centerList"
+      ></dlv-mat-services-menu>
+    </div>
+    <div class="header__notifications">
+      <i class="material-icons dlv-icon">notifications</i>
+    </div>
+    <div class="header__profile hidden-sm">
+      <delhivery-user-details
+        (onLogout)="goState()"
+        [isMaterialView]="true"
+      ></delhivery-user-details>
+    </div>
+  </nav>
+</header>
+<div>
+  <!-- <div class="menu_visible" title [ngClass]="setLayout ? 'content-wrapper' : 'p-0'"> -->
+  <div class="menu_visible content-wrapper" title>
+    <div class="grey_background"></div>
+    <div
+      id="sidebar-wrapper"
+      [ngClass]="collapseSidebar ? 'collapsed' : ''"
+      (clickOutside)="closeSidebar($event)"
+    >
+      <sidebar></sidebar>
+    </div>
+    <div class="content-area" style="margin-top: 18px ">
+      <div class="container-fluid">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div>

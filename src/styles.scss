@@ -1,0 +1,34 @@
+@import "~dlv-material/dlv-theme.scss";
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700,900");
+// icon color
+
+/deep/.material-icons.dlv-icon {
+  color: #bec0c1 !important;
+  transition: 0.3s linear;
+  &:hover {
+    color: #262727 !important;
+  }
+  &:focus,
+  &:active {
+    color: #ef4136 !important;
+  }
+}
+
+// overwrites sidebar styles
+#sidebar-wrapper,
+.sidebar-wrapper {
+  width: 250px;
+}
+
+#sidebar-wrapper.collapsed {
+  left: -250px;
+  transition: left 0.3s, transform 2s;
+}
+@media (max-width: 769px) {
+  #sidebar-wrapper.collapsed {
+    left: 0px;
+  }
+}
+.menu_visible .content-area {
+  padding-left: 250px;
+}

@@ -1,0 +1,72 @@
+.sidebar-nav {
+  .mob-profile {
+    margin: 20px;
+    position: relative;
+    p {
+      position: absolute;
+      font-weight: bold;
+      text-transform: capitalize;
+      display: inline-block;
+      left: 50px;
+      top: 3px;
+      margin-bottom: 5px;
+      text-transform: uppercase;
+      &.text-hor {
+        padding: 8px 0px;
+      }
+    }
+  }
+  li {
+    padding-left: 11px;
+    a {
+      line-height: 23px;
+      color: #696969;
+      &:hover,
+      &:focus {
+        background: transparent;
+      }
+    }
+    i.brick {
+      height: 25px;
+      width: 25px;
+      background: #a7aeb3;
+      margin-right: 15px;
+    }
+    &.active {
+      margin-right: 15px;
+      background: #e8eaed !important;
+      border-bottom-right-radius: 5px;
+      border-top-right-radius: 5px;
+      a {
+        color: #262727;
+        border-bottom-right-radius: 5px;
+        border-top-right-radius: 5px;
+        &:hover {
+          background: transparent;
+        }
+        &:hover,
+        &:focus {
+          background: #e8eaed !important;
+        }
+      }
+      i.brick {
+        background: #262727;
+      }
+    }
+  }
+
+  span.mat-ava {
+    border-radius: 50%;
+    background: red;
+    color: #fff;
+    font-weight: 600;
+    font-size: 15px;
+    display: inline-block;
+    height: 38px;
+    width: 38px;
+    line-height: 38px;
+    padding: 0 10px;
+    margin-right: 7px;
+    text-transform: uppercase;
+  }
+}

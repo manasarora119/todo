@@ -1,0 +1,32 @@
+<ul class="nav sidebar-nav" role="tablist" aria-multiselectable="false">
+  <div class="mob-profile visible-xs visible-sm">
+    <span
+      class="mat-ava"
+      [ngStyle]="{ background: avatarBackgroundcolor || '#000' }"
+      >{{ userProfileAvatar }}</span
+    >
+    <p [ngClass]="{ 'text-hor': (userFirstName + userLastName).length < 18 }">
+      {{ userFirstName }} {{ userLastName }}
+    </p>
+  </div>
+  <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+    <a [routerLink]="['/dashboard']"> <i class="brick"></i>Dashboard </a>
+  </li>
+  <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+    <a [routerLink]="['/analytics']"> <i class="brick"></i>Analytics </a>
+  </li>
+  <hr
+    class="break-line"
+    style="border-color: #dbdbdb;margin-bottom: 10px;"
+    class="visible-xs visible-sm"
+  />
+  <li
+    routerLinkActive="active"
+    [routerLinkActiveOptions]="{ exact: true }"
+    class="visible-xs visible-sm"
+  >
+    <a [routerLink]="['/login']" (click)="onLogout()">
+      <i class="brick"></i>Logout
+    </a>
+  </li>
+</ul>
